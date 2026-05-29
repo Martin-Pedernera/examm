@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registración</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Registración</h1>
+            <form id="registroForm">
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input 
+                        type="text" 
+                        id="apellido" 
+                        name="apellido" 
+                        placeholder="Ingrese su apellido"
+                        required
+                    >
+                    <span class="error" id="errorApellido"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        placeholder="Ingrese su nombre"
+                        required
+                    >
+                    <span class="error" id="errorNombre"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input 
+                        type="text" 
+                        id="dni" 
+                        name="dni" 
+                        placeholder="Ingrese su DNI"
+                        maxlength="8"
+                        required
+                    >
+                    <span class="error" id="errorDni"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input 
+                        type="date" 
+                        id="fechaNacimiento" 
+                        name="fechaNacimiento" 
+                        placeholder="dd/mm/aaaa"
+                        required
+                    >
+                    <span class="error" id="errorFecha"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Ingrese su email"
+                        required
+                    >
+                    <span class="error" id="errorEmail"></span>
+                </div>
+
+                <button type="button" id="btnPreguntas" class="btn-preguntas">
+                    Preguntas-Respuestas
+                </button>
+            </form>
+
+            <div id="respuestasContainer" class="respuestas-container" style="display: none;">
+                <label for="respuestas">Sus respuestas fueron:</label>
+                <div id="respuestas" class="respuestas-box"></div>
+            </div>
+
+            <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+                ✓ Registro completado exitosamente
+            </div>
+        </div>
+    </div>
+
+    <script src="validaciones.js"></script>
+</body>
+</html>
